@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      {{valueTitle}} {{DHLDataValue + inpostDataValue}}
+      </div>
+      <div class="col-sm">
+      {{constructorsTitle}} {{DHLDataContractors +
+  inpostDataContractors}}
+      </div>
+      <div class="col-sm">
+      {{totalPackages}} {{summaryDHL + summaryInpost}}
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
