@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -26,8 +27,10 @@
     "@types/proj4": "^2.5.0",
     "angular-highcharts": "^10.0.1",
     "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
     "highcharts": "^8.2.2",
     "highcharts-angular": "^2.8.2",
+    "path": "^0.12.7",
     "proj4": "^2.6.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
