@@ -16,17 +16,9 @@ export class SummaryComponent {
 DHLDataValue;
 inpostDataValue;
   
-  constructor( dataService: SummaryService) { 
-
-    this.DHLDataValue = dataService.getDHL()
-    this.inpostDataValue = dataService.getInpost()
-    this.chartGantt.series.push(this.DHLDataValue)
-    this.chartGantt.series.push(this.inpostDataValue)
-
-  }
   
 Highcharts: typeof Highcharts = Highcharts;
-chartGantt = {
+chartGantt: Highcharts.Options = {
   chart: {
       type: 'bar',
   },
@@ -64,14 +56,12 @@ chartGantt = {
   },
   legend: {
       layout: 'vertical',
-      align: 'right',
+      align: "right",
       verticalAlign: 'top',
       x: -2,
       y: 120,
       floating: true,
       borderWidth: 1,
-      backgroundColor:
-        Highcharts.defaultOptions.legend!.backgroundColor || 'none',
       shadow: true
   },
   credits: {
@@ -82,4 +72,13 @@ chartGantt = {
  },
   series: <any>[]
 }
+
+constructor( dataService: SummaryService) { 
+
+    this.DHLDataValue = dataService.getDHL()
+    this.inpostDataValue = dataService.getInpost()
+    this.chartGantt.series!.push(this.DHLDataValue)
+    this.chartGantt.series!.push(this.inpostDataValue)
+
+  }
 }          
