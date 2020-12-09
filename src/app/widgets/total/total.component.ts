@@ -13,7 +13,7 @@ export class TotalComponent implements OnInit {
 
   valueTitle = "Total value:";
   constructorsTitle = "Total number of the constructors:";
-  totalPackages = "Total number of delivered packages:"
+  totalPackages = "Total number of delivered packs:"
   
   DHLDataValue;
   inpostDataValue;
