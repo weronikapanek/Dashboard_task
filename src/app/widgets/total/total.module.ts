@@ -4,13 +4,13 @@ import { BarGraphComponent } from '../bar-graph/bar-graph.component';
 import { SummaryComponent } from '../summary/summary.component';
 
 
-
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     BarGraphComponent,
-    SummaryComponent
+    SummaryComponent,
+  
   ]
 })
 export class TotalModule { }
